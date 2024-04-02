@@ -1,0 +1,237 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.dark-mode {
+  background-color: #170312;
+  transition: all ease-in-out 0.5s;
+  box-shadow: 0 0 10px white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  background-color: #531253;
+  color: white;
+  height: 100%;
+}
+.header .header-der {
+  display: flex;
+  gap: 1.25rem;
+}
+.header .header-der .btn-color-mode {
+  background-color: #531253;
+  border: none;
+}
+.header .header-der button {
+  background-color: transparent;
+  border: none;
+}
+.header .header-der button i {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+.header .header-der button i:hover {
+  color: #e6e5e5;
+}
+.header .carrito {
+  width: 500px;
+  position: absolute;
+  background-image: linear-gradient(to bottom, #33032f, #531253);
+  top: 0;
+  right: 0;
+  height: 100%;
+  visibility: hidden;
+  z-index: 1;
+}
+.header .carrito .header-carrito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #531253;
+  margin-bottom: 30px;
+  padding-right: 7.5rem;
+}
+.header .carrito .header-carrito p {
+  margin: 0;
+}
+.header .carrito .compras {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 1rem 2rem;
+  background-color: #531253;
+}
+.header .carrito .compras img {
+  width: 80px;
+}
+.header .carrito .compras p {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.header .carrito .compras button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+}
+.header .carrito .compras button .btn-producto {
+  color: white;
+}
+.header .carrito h2 {
+  text-align: center;
+  color: white;
+  padding: 1rem;
+  padding-top: 0;
+  text-transform: uppercase;
+  font-style: italic;
+}
+.header .carrito .btn-cerrar {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.header .carrito .btn-cerrar i {
+  color: white;
+  font-size: 1.7rem;
+  padding: 0.5rem;
+  margin-right: 0.75rem;
+}
+.header .ver-compras {
+  visibility: visible;
+}
+.header h1 {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+main .tienda {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  position: relative;
+}
+main .tienda .lista-categorias {
+  background-image: linear-gradient(to bottom, #33032f, #531253);
+  border-radius: 7px;
+  height: 90vh;
+  padding: 0.7rem;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+main .tienda .lista-categorias h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-style: italic;
+  text-align: center;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+main .tienda .lista-categorias ul {
+  padding: 0;
+  margin: 0;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .tienda .lista-categorias ul li {
+  list-style: none;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+main .tienda .lista-categorias ul li i {
+  padding-right: 0.5rem;
+}
+main .tienda .lista-categorias ul li:hover {
+  background-color: #531253;
+  border-radius: 10px 0 10px 0;
+}
+main .tienda .lista-categorias ul li:hover button {
+  transform: translateX(15px);
+}
+main .tienda .lista-categorias ul li button {
+  border: 0;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: all ease-in-out 0.2s;
+  color: white;
+}
+main .tienda .productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.5rem;
+}
+main .tienda .productos .card-productos {
+  border-radius: 9px 9px 0 0;
+  background-color: #f3f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+main .tienda .productos .card-productos img {
+  width: 100%;
+  object-fit: contain;
+  height: 350px;
+  border: 1px solid #dcdcdc;
+  border-radius: 9px 9px 0 0;
+}
+main .tienda .productos .card-productos .card-body-productos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #bfbebe;
+  padding: 1rem;
+}
+main .tienda .productos .card-productos .card-body-productos h3 {
+  font-style: italic;
+  color: black;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+main .tienda .productos .card-productos .btn-carrito {
+  background-color: #33032f;
+  color: white;
+  text-decoration: none;
+  padding: 0.7rem 2rem;
+  transition: all ease-in-out 0.2s;
+  border: 0;
+}
+main .tienda .productos .card-productos .btn-carrito:hover {
+  background-color: #531253;
+}
+
+footer {
+  background-color: #531253;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  font-style: italic;
+  font-weight: bold;
+}
+footer p {
+  margin: 0;
+  color: white;
+  text-align: center;
+  padding: 3rem;
+}
+
+/*# sourceMappingURL=style.css.map */

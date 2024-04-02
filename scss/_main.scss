@@ -1,0 +1,130 @@
+// MAIN
+
+main {
+
+  // TIENDA
+
+  .tienda {
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    position: relative;
+
+    // ASIDE
+
+    .lista-categorias {
+      background-image: linear-gradient(to bottom, #33032f, #531253);
+      border-radius: 7px;
+      height: 90vh;
+      padding: 0.7rem;
+      margin-right: 1rem;
+      display: flex;
+      flex-direction: column;
+      color: white;
+
+      h2 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-style: italic;
+        text-align: center;
+        padding: 1.5rem;
+        margin-bottom: 2.5rem;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        li {
+          list-style: none;
+          transition: all ease-in-out 0.2s;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+
+          i {
+            padding-right: 0.5rem;
+          }
+
+          &:hover {
+            background-color: #531253;
+            border-radius: 10px 0 10px 0;
+
+            button {
+              transform: translateX(15px);
+            }
+          }
+
+          button {
+            border: 0;
+            background-color: transparent;
+            text-decoration: none;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: all ease-in-out 0.2s;
+            color: white;
+          }
+        }
+      }
+    }
+
+    // CARDS PRODUCTOS
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 1.5rem;
+
+      .card-productos {
+        border-radius: 9px 9px 0 0;
+        background-color: #f3f1f1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 2rem;
+
+        img {
+          width: 100%;
+          object-fit: contain;
+          height: 350px;
+          border: 1px solid #dcdcdc;
+          border-radius: 9px 9px 0 0;
+        }
+
+        .card-body-productos {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background-color: #bfbebe;
+          padding: 1rem;
+
+          h3 {
+            font-style: italic;
+            color: black;
+            text-align: center;
+            font-size: 1.7rem;
+            font-weight: bold;
+          }
+        }
+
+        .btn-carrito {
+          background-color: #33032f;
+          color: white;
+          text-decoration: none;
+          padding: 0.7rem 2rem;
+          transition: all ease-in-out 0.2s;
+          border: 0;
+
+          &:hover {
+            background-color: #531253;
+          }
+        }
+      }
+    }
+  }
+}
