@@ -1,84 +1,30 @@
-// LISTA PRODUCTOS
-
-const productos = [
-    {   
-        id: 1,
-        img: "img/zapatillas-adidas.png",
-        nombre: "Zapatillas Adidas",
-        marca:"Adidas",
-        precio: 10000
-    },
-    {   
-        id: 2,
-        img: "img/zapatillas-adidas-2.png",
-        nombre: "Zapatillas Adidas",
-        marca:"Adidas",
-        precio: 8500
-    },
-    {   
-        id: 3,
-        img: "img/zapatillas-jordan.png",
-        nombre: "Zapatillas Jordan",
-        marca:"Jordan",
-        precio: 15000
-    },
-    {   
-        id: 4,
-        img: "img/zapatillas-jordan-2.png",
-        nombre: "Zapatillas Jordan",
-        marca:"Jordan",
-        precio: 17500
-    },
-    {   
-        id: 5,
-        img: "img/zapatillas-nike.png",
-        nombre: "Zapatillas Nike",
-        marca:"Nike",
-        precio: 11000
-    },
-    {   
-        id: 6,
-        img: "img/zapatillas-nike-2.png",
-        nombre: "Zapatillas All Nike",
-        marca:"Nike",
-        precio: 7000
-    },
-    {   
-        id: 7,
-        img: "img/zapatillas-converse.png",
-        nombre: "Zapatillas Converse",
-        marca:"Converse",
-        precio: 9000
-    },
-    {   
-        id: 8,
-        img: "img/zapatillas-converse-2.png",
-        nombre: "Zapatillas Converse",
-        marca:"Converse",
-        precio: 10000
-    },
-    {   
-        id: 9,
-        img: "img/zapatillas-puma.png",
-        nombre: "Zapatillas Puma",
-        marca:"Puma",
-        precio: 14000
-    }
-];
+fetch("/data/productos.json")
+    .then((res) => res.json ())
+    .then((data) => {
+        cargarLosProductos(data)
+    })
 
 // DARK MODE
 
 const btnColorMode = document.querySelector("#color-mode"); 
+
+const colorModeLS = localStorage.getItem("modocolor");
+if(colorModeLS === "oscuro"){
+    document.body.classList.toggle("dark-mode")
+}
 
 btnColorMode.addEventListener("click", () => {
 
     document.body.classList.toggle("dark-mode");
 
     if(document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("modocolor", "oscuro");
         btnColorMode.innerHTML = '<i class ="bi bi-moon-stars-fill"><i>';
     }else{
         btnColorMode.innerHTML = '<i class="bi bi-brightness-high-fill"></i>';
+        localStorage.removeItem("modocolor");
     }
+
 });
 
 
@@ -110,27 +56,52 @@ const carritoProductos = document.querySelector("#carrito-compras");
 
 // CARGAR PRODUCTOS
 
-productos.forEach((producto) => {
+const cargarLosProductos = (productos) => {
+
+    containerProductos.innerHTML = "";
+
+    productos.forEach((producto) => {
     
-    let div = document.createElement("div");
-    div.classList.add("card-productos");
-    div.innerHTML = `
-    <img src="${producto.img}">
-    <div class="card-body-productos"> 
-        <h3>${producto.nombre}</h3>        
-        <p>$${producto.precio}</p>
-    </div>`;
+        let div = document.createElement("div");
+        div.classList.add("card-productos");
+        div.innerHTML = `
+        <img src="${producto.img}">
+        <div class="card-body-productos"> 
+            <h3>${producto.nombre}</h3>        
+            <p>$${producto.precio}</p>
+        </div>`;
+        
+        let btnProductos = document.createElement("button");
+        btnProductos.classList.add("btn-carrito");
+        btnProductos.innerText = "Agregar al carrito";
+        btnProductos.addEventListener("click", () => {
+            agregarCarrito(producto);
     
-    let btnProductos = document.createElement("button");
-    btnProductos.classList.add("btn-carrito");
-    btnProductos.innerText = "Agregar al carrito";
-    btnProductos.addEventListener("click", () => {
-        agregarCarrito(producto);
-    });
-    
-    div.append(btnProductos);
-    containerProductos.append(div);
-}) 
+            Toastify({
+                text: "Producto Agregado",
+                className: "toastify",
+                duration: 1300,
+                style: {
+                  background: "#33032f",
+                }
+            }).showToast();
+        });
+        
+        div.append(btnProductos);
+        containerProductos.append(div);
+    }) 
+}
+
+const btnMarcas = document.querySelectorAll('.btn-marcas');
+
+btnMarcas.forEach(boton => {
+    boton.addEventListener("click", (e) => {
+
+        const productosBoton = productos.filter(producto => producto.marca === e.currentTarget.marca);
+        cargarLosProductos(productosBoton);
+
+    })
+});
 
 // AGREGAR PRODUCTOS AL CARRITO
 

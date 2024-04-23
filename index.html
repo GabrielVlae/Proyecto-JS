@@ -16,6 +16,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <!--? TOASTIFY -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!--? CSS -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -45,20 +47,24 @@
         <h2>Tus compras</h2>
 
         <header class="header-carrito">
-          <p>Articulos</p>
+          <p>Articulo</p>
           <p>Precio</p>
           <p>Cant</p>
         </header>
 
         <div id="carrito-compras">
             <!--? PRODUCTOS AGREGADOS -->
+
+            <button id="vaciar-carrito">Vaciar carrito</button>
         </div>
           
         <div class="carrito-total">
           <h2>Total: <span id="carrito-total">$0</span></h2>
+          <button id="eliminar-carrito">Eliminar carrito</button>
         </div>
 
       </div>
+
     </header>
 
     <!--? MAIN -->
@@ -73,23 +79,23 @@
           <ul>
             <li>
               <i class="bi bi-caret-right-fill"></i
-              ><button id="item">Nike</button>
+              ><button class="btn-marcas">Nike</button>
             </li>
             <li>
               <i class="bi bi-caret-right-fill"></i
-              ><button id="item">Adidas</button>
+              ><button class="btn-marcas">Adidas</button>
             </li>
             <li>
               <i class="bi bi-caret-right-fill"></i
-              ><button id="item">Jordan</button>
+              ><button class="btn-marcas">Jordan</button>
             </li>
             <li>
               <i class="bi bi-caret-right-fill"></i
-              ><button id="item">Converse</button>
+              ><button class="btn-marcas">Converse</button>
             </li>
             <li>
               <i class="bi bi-caret-right-fill"></i
-              ><button id="item">Puma</button>
+              ><button class="btn-marcas">Puma</button>
             </li>
           </ul>
         </aside>
@@ -107,6 +113,12 @@
       <p>©Todos los derechos reservados</p>
     </footer>
 
+    <!--? SWEET ALERT SCRIPT  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--? TOASTIFY SCRIPT -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!--? PAGINA SCRIPT  -->
     <script src="js/main.js"></script>
+    
   </body>
 </html>
