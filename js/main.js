@@ -3,6 +3,7 @@ fetch("/data/productos.json")
     .then((data) => {
         productos = [...data];
         cargarLosProductos(productos);
+        window.productos = data;
     });
 
 const menuCarrito = document.querySelector("#carrito-menu");
