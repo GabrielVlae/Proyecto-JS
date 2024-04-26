@@ -6,17 +6,18 @@ main {
 
   .tienda {
     display: grid;
-    grid-template-columns: 25% 1fr;
+    grid-template-columns: 30% 1fr;
     position: relative;
+    place-content: center;
 
     // ASIDE
 
     .lista-categorias {
-      background-image: linear-gradient(to bottom, #33032f, #531253);
-      border-radius: 7px;
-      height: 90vh;
+      background-image: linear-gradient(to bottom,#531253, #33032f);
+      border-radius: 15px 0  15px 0;
+      height: 750px;
       padding: 0.7rem;
-      margin-right: 1rem;
+      margin-inline: 1rem;
       display: flex;
       flex-direction: column;
       color: white;
@@ -33,7 +34,7 @@ main {
       ul {
         padding: 0;
         margin: 0;
-        padding-left: 1rem;
+        padding-inline: 1rem;
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -45,28 +46,25 @@ main {
           display: flex;
           align-items: center;
 
-          i {
-            padding-right: 0.5rem;
-          }
-
-          &:hover {
-            background-color: #531253;
-            border-radius: 10px 0 10px 0;
-
-            button {
-              transform: translateX(15px);
-            }
-          }
-
           button {
             border: 0;
             background-color: transparent;
             text-decoration: none;
-            font-size: 1.5rem;
+            font-size: 1.55rem;
             text-transform: uppercase;
             display: inline-block;
             transition: all ease-in-out 0.2s;
             color: white;
+            width: 100%;
+            padding: 1rem 0.5rem;
+            text-align: start;
+            cursor: pointer;
+
+            &:hover {
+              transform: translateX(10px);
+              background-color: #531253;
+              border-radius: 10px 0 10px 0;
+            }
           }
         }
       }
@@ -78,6 +76,7 @@ main {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       column-gap: 1.5rem;
+      place-content: start;
 
       .card-productos {
         border-radius: 9px 9px 0 0;
@@ -119,6 +118,9 @@ main {
           padding: 0.7rem 2rem;
           transition: all ease-in-out 0.2s;
           border: 0;
+          cursor: pointer;
+          text-transform: uppercase;
+          font-weight: bold;
 
           &:hover {
             background-color: #531253;

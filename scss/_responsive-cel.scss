@@ -1,0 +1,34 @@
+
+@media (max-width: 600px){
+
+    .header{
+
+        h1{
+            font-size: 2.4rem;
+        }
+
+        .carrito{
+            width: 100vw;
+        }
+
+    }
+
+    main{
+
+        .tienda{
+            place-content: center;
+            grid-template-columns: 1fr;
+            padding: 2.5rem;
+
+            .lista-categorias{
+                margin-bottom: 2rem;
+                height: 700px;
+            }
+    
+            .productos{
+                grid-template-columns: 1fr;
+            }
+
+        }
+    }
+}

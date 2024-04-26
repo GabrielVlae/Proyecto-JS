@@ -8,7 +8,6 @@
   margin-bottom: 2rem;
   background-color: #531253;
   color: white;
-  height: 100%;
 
   .header-der {
     display: flex;
@@ -40,13 +39,37 @@
   .carrito {
     width: 500px;
     position: absolute;
-    background-image: linear-gradient(to bottom, #33032f, #531253);
+    background-color: #33032f;
     top: 0;
     right: 0;
-    height: 100%;
     visibility: hidden;
     z-index: 1;
+    height: max-content;
 
+    .btns-eliminar-confirmar{
+      text-align: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      display: none;
+
+      .finalizar-vaciar{
+        background-color: #531253;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+
+        &:hover{
+          background-color: #910391;
+        }
+      }
+
+    }
+
+    .d-visible{
+      display: block;
+    }
+    
     .header-carrito {
       display: flex;
       justify-content: space-between;
@@ -70,6 +93,7 @@
 
       img {
         width: 80px;
+        height: 90px;
       }
 
       p {
@@ -79,8 +103,10 @@
 
       button {
         background-color: transparent;
+        font-size: 1rem;
         border: none;
         display: flex;
+        cursor: pointer;
 
         .btn-producto {
           color: white;
@@ -88,7 +114,7 @@
       }
     }
 
-    h2 {
+    h2, h4{
       text-align: center;
       color: white;
       padding: 1rem;
@@ -103,6 +129,7 @@
       width: 100%;
       display: flex;
       justify-content: end;
+      cursor: pointer;
 
       i {
         color: white;

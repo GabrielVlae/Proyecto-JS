@@ -1,0 +1,23 @@
+
+@media (min-width: 600px) and (max-width: 992px){
+
+    main{
+
+        .tienda{
+            grid-template-columns: 1fr;
+            place-content: center;
+            padding: 4rem;
+
+            .lista-categorias{
+                margin-bottom: 2rem;
+                height: 700px;
+            }
+    
+            .productos{
+                grid-template-columns: repeat(2, 1fr);
+                place-content: center;
+            }
+
+        }
+    }
+}

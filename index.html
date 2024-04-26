@@ -4,13 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tercera Pree Entrega</title>
-    <!--? BOOSTRAP -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
     <!--? BOOSTRAP ICONOS -->
     <link
       rel="stylesheet"
@@ -22,7 +15,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body>
+  <body style="padding: 0;">
 
     <!--? HEADER -->
 
@@ -45,24 +38,27 @@
         </button>
 
         <h2>Tus compras</h2>
-
+        
+        <div class="carrito-total">
+          <h4>Total: <span id="carrito-total">$0</span></h4>
+        </div>
+        
+        <div id="btns-eliminar-confirmar" class="btns-eliminar-confirmar">
+          <button id="eliminar-carrito" class="finalizar-vaciar">Eliminar carrito</button>
+          <button id="finalizar-compra" class="finalizar-vaciar">Finalizar Compra</button>
+        </div>
+        
         <header class="header-carrito">
           <p>Articulo</p>
           <p>Precio</p>
           <p>Cant</p>
         </header>
 
+
         <div id="carrito-compras">
             <!--? PRODUCTOS AGREGADOS -->
-
-            <button id="vaciar-carrito">Vaciar carrito</button>
         </div>
           
-        <div class="carrito-total">
-          <h2>Total: <span id="carrito-total">$0</span></h2>
-          <button id="eliminar-carrito">Eliminar carrito</button>
-        </div>
-
       </div>
 
     </header>
@@ -78,26 +74,25 @@
 
           <ul>
             <li>
-              <i class="bi bi-caret-right-fill"></i
-              ><button class="btn-marcas">Nike</button>
+                <i class="bi bi-caret-right-fill"></i><button class="btn-marcas" id="Todas">Todas</button>
             </li>
             <li>
-              <i class="bi bi-caret-right-fill"></i
-              ><button class="btn-marcas">Adidas</button>
+                <i class="bi bi-caret-right-fill"></i><button class="btn-marcas" id="nike">Nike</button>
             </li>
             <li>
-              <i class="bi bi-caret-right-fill"></i
-              ><button class="btn-marcas">Jordan</button>
+                <i class="bi bi-caret-right-fill"></i><button class="btn-marcas" id="adidas">Adidas</button>
             </li>
             <li>
-              <i class="bi bi-caret-right-fill"></i
-              ><button class="btn-marcas">Converse</button>
+                <i class="bi bi-caret-right-fill"></i><button class="btn-marcas" id="jordan">Jordan</button>
             </li>
             <li>
-              <i class="bi bi-caret-right-fill"></i
-              ><button class="btn-marcas">Puma</button>
+                <i class="bi bi-caret-right-fill"></i><button class="btn-marcas" id="converse">Converse</button>
+            </li>
+            <li>
+                <i class="bi bi-caret-right-fill"></i><button class="btn-marcas" id="puma">Puma</button>
             </li>
           </ul>
+
         </aside>
 
         <div id="productos" class="productos">
@@ -111,6 +106,7 @@
 
     <footer>
       <p>©Todos los derechos reservados</p>
+      <p>2024</p>
     </footer>
 
     <!--? SWEET ALERT SCRIPT  -->
