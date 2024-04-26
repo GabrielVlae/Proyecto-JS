@@ -76,6 +76,7 @@ main {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       column-gap: 1.5rem;
+      margin-right: 1rem;
       place-content: start;
 
       .card-productos {

@@ -203,6 +203,7 @@ main .tienda .productos {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 1.5rem;
+  margin-right: 1rem;
   place-content: start;
 }
 main .tienda .productos .card-productos {
@@ -277,6 +278,7 @@ footer p {
   main .tienda .productos {
     grid-template-columns: repeat(2, 1fr);
     place-content: center;
+    margin: 0;
   }
 }
 @media (max-width: 600px) {
@@ -297,6 +299,7 @@ footer p {
   }
   main .tienda .productos {
     grid-template-columns: 1fr;
+    margin: 0;
   }
 }
 

@@ -16,6 +16,7 @@
             .productos{
                 grid-template-columns: repeat(2, 1fr);
                 place-content: center;
+                margin: 0;
             }
 
         }
