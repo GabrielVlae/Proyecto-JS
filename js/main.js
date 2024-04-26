@@ -152,11 +152,8 @@ const agregarCarrito = (producto) => {
 // ACTUALIZAR CARRITO
 
 const actualizarCarrito = () => {
-    if(carritoCompra.length === 0){
-        finalizarVaciar.classList.remove("d-visible");
-    }else{
-        finalizarVaciar.classList.add("d-visible");
-    }
+
+    carritoCompra.length === 0 ? finalizarVaciar.classList.remove("d-visible") : finalizarVaciar.classList.add("d-visible"),
 
     carritoProductos.innerHTML = "";
     carritoCompra.forEach((producto) => {
