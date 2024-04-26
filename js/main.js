@@ -1,10 +1,10 @@
 fetch("/data/productos.json")
-.then((res) => res.json ())
-.then((data) => {
-    productos = [...data];
-    cargarLosProductos(data);
-    window.productos = data;
-});
+    .then((res) => res.json ())
+    .then((data) => {
+        productos = [...data];
+        cargarLosProductos(productos);
+        window.productos = data;
+    });
 
 const menuCarrito = document.querySelector("#carrito-menu");
 const abrirCarrito = document.querySelector("#abrir");
