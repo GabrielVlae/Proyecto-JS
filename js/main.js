@@ -1,4 +1,4 @@
-fetch("./data/productos.json")
+fetch("../data/productos.json")
     .then((res) => res.json ())
     .then((data) => {
         productos = [...data];
@@ -9,7 +9,7 @@ fetch("./data/productos.json")
 const menuCarrito = document.querySelector("#carrito-menu");
 const abrirCarrito = document.querySelector("#abrir");
 const cerrarCarrito = document.querySelector("#cerrar");
-const containerProductos = document.querySelector("#productocles");
+const containerProductos = document.querySelector("#productos");
 const carritoTotal = document.querySelector("#carrito-total");
 const carritoProductos = document.querySelector("#carrito-compras");
 const finalizarVaciar = document.querySelector("#btns-eliminar-confirmar");
