@@ -1,63 +1,63 @@
 [
     {   
         "id": 1,
-        "img": "img/zapatillas-adidas.png",
+        "img": "./img/zapatillas-adidas.png",
         "nombre": "Zapatillas Adidas",
         "marca":"Adidas",
         "precio": 10000
     },
     {   
         "id": 2,
-        "img": "img/zapatillas-adidas-2.png",
+        "img": "./img/zapatillas-adidas-2.png",
         "nombre": "Zapatillas Adidas",
         "marca":"Adidas",
         "precio": 8500
     },
     {   
         "id": 3,
-        "img": "img/zapatillas-jordan.png",
+        "img": "./img/zapatillas-jordan.png",
         "nombre": "Zapatillas Jordan",
         "marca":"Jordan",
         "precio": 15000
     },
     {   
         "id": 4,
-        "img": "img/zapatillas-jordan-2.png",
+        "img": "./img/zapatillas-jordan-2.png",
         "nombre": "Zapatillas Jordan",
         "marca":"Jordan",
         "precio": 17500
     },
     {   
         "id": 5,
-        "img": "img/zapatillas-nike.png",
+        "img": "./img/zapatillas-nike.png",
         "nombre": "Zapatillas Nike",
         "marca":"Nike",
         "precio": 11000
     },
     {   
         "id": 6,
-        "img": "img/zapatillas-nike-2.png",
+        "img": "./img/zapatillas-nike-2.png",
         "nombre": "Zapatillas All Nike",
         "marca":"Nike",
         "precio": 7000
     },
     {   
         "id": 7,
-        "img": "img/zapatillas-converse.png",
+        "img": "./img/zapatillas-converse.png",
         "nombre": "Zapatillas Converse",
         "marca":"Converse",
         "precio": 9000
     },
     {   
         "id": 8,
-        "img": "img/zapatillas-converse-2.png",
+        "img": "./img/zapatillas-converse-2.png",
         "nombre": "Zapatillas Converse",
         "marca":"Converse",
         "precio": 10000
     },
     {   
         "id": 9,
-        "img": "img/zapatillas-puma.png",
+        "img": "./img/zapatillas-puma.png",
         "nombre": "Zapatillas Puma",
         "marca":"Puma",
         "precio": 14000
